@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Benny Meisels",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -4.9,
+      "left": 4.6,
+      "attrs": { "builder": "esp-idf" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 71.33, "left": 152, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix1",
+      "top": 135,
+      "left": 218.64,
+      "attrs": { "chain": "4" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "led1:A", "esp:D2", "Yellow", [ "v0" ] ],
+    [ "matrix1:V+.2", "esp:3V3", "green", [ "v0" ] ],
+    [ "matrix1:GND.2", "esp:GND.1", "black", [ "h-57.44", "v-19.2", "h-57.3" ] ],
+    [ "matrix1:DOUT", "esp:D23", "green", [ "h-76.64", "v-153.7" ] ],
+    [ "matrix1:CS.2", "esp:D5", "green", [ "h-95.84", "v-96" ] ],
+    [ "matrix1:CLK.2", "esp:D18", "green", [ "h-86.24", "v-115.2" ] ]
+  ],
+  "dependencies": {}
+}
