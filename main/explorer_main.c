@@ -10,6 +10,8 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_log.h"
+#include "driver/gpio.h"
+#include <max7219.h>
 
 #define TAG "APP"
 
