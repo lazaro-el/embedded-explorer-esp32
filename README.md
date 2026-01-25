@@ -29,4 +29,7 @@ If you cannot configure your system properly, you can use Wokwi for programming,
 
 You should now be ready to code. Have fun.
 
+Usefull tool for generation matrix array:
+  https://xantorohara.github.io/led-matrix-editor/
+
 
