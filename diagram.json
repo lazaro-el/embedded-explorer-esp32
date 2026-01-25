@@ -14,9 +14,9 @@
     {
       "type": "wokwi-max7219-matrix",
       "id": "matrix1",
-      "top": 135,
-      "left": 218.64,
-      "attrs": { "chain": "4" }
+      "top": 259.8,
+      "left": -194.16,
+      "attrs": { "chain": "3" }
     },
     {
       "type": "wokwi-led",
@@ -36,17 +36,17 @@
   "connections": [
     [ "esp:TX0", "$serialMonitor:RX", "", [] ],
     [ "esp:RX0", "$serialMonitor:TX", "", [] ],
-    [ "matrix1:V+.2", "esp:3V3", "green", [ "v0" ] ],
-    [ "matrix1:GND.2", "esp:GND.1", "black", [ "h-57.44", "v-19.2", "h-57.3" ] ],
-    [ "matrix1:DOUT", "esp:D23", "green", [ "h-76.64", "v-153.7" ] ],
-    [ "matrix1:CS.2", "esp:D5", "green", [ "h-95.84", "v-96" ] ],
-    [ "matrix1:CLK.2", "esp:D18", "green", [ "h-86.24", "v-115.2" ] ],
     [ "led1:C", "esp:GND.2", "black", [ "v0" ] ],
     [ "led2:C", "esp:GND.2", "black", [ "v0" ] ],
     [ "led3:C", "esp:GND.2", "black", [ "v0" ] ],
     [ "led3:A", "esp:D13", "green", [ "v0" ] ],
     [ "led2:A", "esp:D12", "green", [ "v0" ] ],
-    [ "led1:A", "esp:D14", "green", [ "v0" ] ]
+    [ "led1:A", "esp:D14", "green", [ "v0" ] ],
+    [ "matrix1:DIN", "esp:D19", "green", [ "h48", "v-86.4" ] ],
+    [ "matrix1:CLK", "esp:D18", "green", [ "h76.8", "v-86.4" ] ],
+    [ "matrix1:CS", "esp:D15", "green", [ "h28.8", "v-57.6" ] ],
+    [ "matrix1:V+", "esp:VIN", "red", [ "h9.6", "v-48", "h-163.2", "v-76.8" ] ],
+    [ "matrix1:GND", "esp:GND.1", "black", [ "h19.2", "v-134.4" ] ]
   ],
   "dependencies": {}
 }
