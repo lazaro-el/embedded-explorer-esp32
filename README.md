@@ -9,10 +9,12 @@ Needed software:
 
 - Visual Studio Code  
 - VS Code extensions:  
-  - ESP-IDF <img width="296" height="73" alt="image" src="https://github.com/user-attachments/assets/2be9cc4a-d679-4861-a5ef-3f68fe0e7c28" />
-  - Wokwi Simulator <img width="296" height="74" alt="image" src="https://github.com/user-attachments/assets/bea25088-4563-4697-88c2-e34434afa376" />
+  - [ESP-IDF](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension) <img width="296" height="73" alt="image" src="https://github.com/user-attachments/assets/2be9cc4a-d679-4861-a5ef-3f68fe0e7c28" />
+  - [Wokwi Simulator](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode) <img width="296" height="74" alt="image" src="https://github.com/user-attachments/assets/bea25088-4563-4697-88c2-e34434afa376" />
 
-After installing everything, register on the website https://wokwi.com so you can use Wokwi inside VS Code. Copy the token from the website and paste it into the extension.
+After installing the extensions we need to run the setup for ESP-IDF, which can take a while!
+Next register on the website https://wokwi.com so you can use Wokwi inside VS Code.
+Either copy the token from the website and paste it into the extension, or use the `Wokwi: Request a new License` Action in Visual studio Code.
 
 If everything is set up correctly, you should be able to build the code. The first build may take a few minutes. When you open the file diagram.json, you should be able to run the simulator.
 
