@@ -53,7 +53,9 @@ To ensure the project compiles correctly, you must manually add the driver files
 
 You should now be ready to code. Have fun.
 
-This tool will be handy for solving task:
+
+# Usefull tools
+This tool will help you with making bitmaps:
   https://xantorohara.github.io/led-matrix-editor/
 
 
