@@ -17,7 +17,7 @@ The LEDs should be controlled by the following digital output pins:
 #### 8x8 LED Matrix Display
 Three segments of 8x8 LED matrix display are connected on SPI (Serial Peripheral Interface), which uses several wires for communication:
 * **CLK (Clock):** Pin D18
-* **MOSI (Master Output - Slave Input):** Pin D19
+* **MOSI (Digital Output):** Pin D19
 
 Since the bus can handle multiple devices connected, there is a chip select pin:
 * **CS (Chip Select):** Pin D5
@@ -60,7 +60,7 @@ The first milestone of any hardware journey is making an LED blink. For this tas
 
 Since we are working with an RTOS, there is a catch: you cannot use a standard "delay" or "sleep" function. If you tell the processor to wait, you will block the entire system, and the onboard alive LED will stop blinking. Instead, you need to use the provided 10ms or 20ms tasks as your heartbeat. 
 
-**DoD:** The Red LED blinks steadily while the "Heartbeat" LED continues to flicker.
+**DoD:** The Red LED blinks steadily while the heartbeat LED blinking continuously.
 
 ## Challenge 2: The Traffic Light Controller
 
@@ -75,7 +75,7 @@ The system must follow this specific loop:
 
 You are responsible for determining the specific duration of the Red and Green phases. Ensure they are long enough to allow for future tasks involving the LED matrix. The logic must reside within the existing task structure, ensuring the "Alive" LED remains functional throughout all transitions.
 
-**DoD:** A smooth, looping traffic light sequence that handles the "Blinking Green" logic correctly.
+**DoD:** Looping traffic light in Red-Yellow-Green cycle while heartbeat LED blinks.
 
 ## Challenge 3: The Matrix Awakens
 
@@ -85,13 +85,15 @@ To create your visual, you can use an online tool like the [LED Matrix Editor](h
 
 The main requirement for this challenge is that your traffic light system from Challenge 2 must continue to function perfectly in the background. The matrix display should show your custom design while the LEDs continue their Red-Yellow-Green cycle without any interruption.
 
+**DoD:** Showing static graphic on matrix display, with fully working traffic light, and heartbeat
+
 ## Challenge 4: The Great Shift
 
 With a static image successfully appearing on the display, the next step is to introduce motion. Your goal for this challenge is to take the bitmap or symbol you created in the previous step and make it shift or scroll across the 24x8 matrix area.
 
 You will need to decide on a desired speed for this movement. Since your code is executed within the 10ms and 20ms tasks, you must determine how frequently the image data should be shifted to create a smooth animation. As with the previous tasks, the traffic light sequence must remain fully operational and synchronized while the matrix animation is running.
 
-
+**DoD:** Moving graphic on the matrix display, with fully working traffic light, and heartbeat
 
 ## Challenge 5: Context-Aware Signage
 
@@ -102,3 +104,5 @@ Your objectives for this final task are:
 2. **Green Light Active:** The matrix must switch to displaying shifting arrows (e.g., `-> -> ->`) that move from left to right to guide traffic through the intersection.
 
 You must ensure that the transition between these displays happens automatically as the traffic light changes phases. Make sure the durations you set for your Red and Green phases in Challenge 2 provide enough time for the scrolling text or arrows to be clearly readable by an observer.
+
+**DoD:** Moving graphic on the matrix display synchronized with traffic light, while heartbeat blinks continuously. 
