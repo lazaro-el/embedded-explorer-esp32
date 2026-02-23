@@ -13,6 +13,7 @@ Install the following tools to get started:
 * Editor: [Visual Studio Code](https://code.visualstudio.com/)
 * Extensions:
     * [ESP-IDF Extension](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension): For building and flashing code.
+      To install it, follow [installation manual](https://marketplace.visualstudio.com/items?itemName=espressif.esp-idf-extension) depending on which OS you are using. (For Windows, extension handles it completely)
     * [Wokwi Simulator](https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode): For hardware simulation within VS Code.
 
 ### 2. Initial Configuration
